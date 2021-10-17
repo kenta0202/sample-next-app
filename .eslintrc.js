@@ -25,6 +25,11 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
   },
-  ignorePatterns: [".eslintrc.js"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "tailwind.config.js",
+    "next.config.js",
+    "next-env.d.ts",
+  ],
   plugins: ["jest"],
 };
