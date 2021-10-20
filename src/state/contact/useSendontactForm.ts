@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 
 const SUBJECT_TITLE = "お問い合わせ";
 const STATIC_FORMS_URL = "https://api.staticforms.xyz/submit";
-const ACCESS_KEY = process.env.STATIC_FORMS_ACCESS_KEY as string;
+const ACCESS_KEY = process.env.ACCESS_KEY as string;
 
 export const useSendContactForm = (): [
   string,
