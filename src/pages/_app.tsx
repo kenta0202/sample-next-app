@@ -1,7 +1,12 @@
 import "../../styles/dist.css";
 import type { AppProps } from "next/app";
-import { useEffect } from "react";
+import React from "react";
+import { ThemeProvider } from "next-themes";
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }

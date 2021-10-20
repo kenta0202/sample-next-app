@@ -4,9 +4,13 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", //ダークモードを有効化する
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkgrey: "#222831", //darkModeで使用したい色を拡張定義
+      },
+    },
   },
   variants: {
     extend: {},

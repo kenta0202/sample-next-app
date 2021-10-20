@@ -1,0 +1,4 @@
+- heroicons のインストール
+  - npm install @heroicons/react
+  - @heroicons/react/outline か@heroicons/react/solid からインポート
+  - import { BeakerIcon } from '@heroicons/react/solid'

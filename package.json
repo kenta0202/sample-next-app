@@ -11,8 +11,10 @@
     "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.4",
     "enzyme-adapter-react-16": "^1.15.6",
     "next": "latest",
+    "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
