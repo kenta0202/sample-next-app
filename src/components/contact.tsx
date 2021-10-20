@@ -1,6 +1,6 @@
 import { ContactParams } from "interfaces/ContactParams";
 import { useFormState } from "state/contact/useFormState";
-import { useSendContactForm } from "state/contact/useSendontactForm";
+import { useSendContactForm } from "state/contact/useSendContactForm";
 
 const Contact: React.VFC = () => {
   const [contact, handleChange] = useFormState<ContactParams>({
