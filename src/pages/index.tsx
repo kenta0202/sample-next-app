@@ -13,7 +13,7 @@ const IndexPage: React.VFC = () => {
       <br />
       <div className="container mx-auto">
         <span id="test">
-          次のページへ
+          次のページ
           <ChevronRightIcon className=" inline w-3 h-3 align-middle translate-x-0.5 -translate-y-0.5" />
         </span>
         <br />
