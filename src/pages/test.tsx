@@ -1,6 +1,6 @@
 import React, { useEffect as UseEffect, useState as UseState } from "react";
 import { db } from "db/firebase";
-import { collection, onSnapshot } from "@firebase/firestore";
+// import { collection, onSnapshot } from "firebase/firestore";
 
 type User = {
   name: string;
@@ -8,6 +8,22 @@ type User = {
   id?: string;
 };
 
+const addTodo = (user: string) =>
+  db.collection("users").add({
+    name: user,
+    age: 11,
+  });
+
+const changeTodo = (user: string) => {
+  void db
+    .collection("users")
+    .doc("ANzVEh6TQRKM0nlSRoXc")
+    .update({ name: user, age: 99 });
+};
+
+const deleteTodo = () => {
+  void db.collection("users").doc("ANzVEh6TQRKM0nlSRoXc").delete();
+};
 const test = () => {
   // state
   const [users, setUsers] = UseState<User[]>([{ name: "Loading..." }]);
@@ -17,17 +33,33 @@ const test = () => {
     db.collection("users").onSnapshot((collection) => {
       const data = collection.docs.map<User>((doc) => ({
         id: doc.id,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        age: doc.data().age,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        name: doc.data().name,
+        age: doc.data().age as number,
+        name: doc.data().name as string,
       }));
       setUsers(data);
     });
   }, []);
   console.log(users);
 
-  return <div>test</div>;
+  return (
+    <div>
+      <button onClick={() => addTodo("ああ")}>add</button>
+      <br />
+      <button onClick={() => changeTodo("おお")}>change</button>
+      <br />
+      <button onClick={() => deleteTodo()}>delete</button>
+      <br />
+      <div className="mt-5">
+        {users.map((user) => (
+          <ul key={user.id} className="flex flex-row gap-5">
+            <li>{user.name}</li>
+            <li>{user.age}</li>
+            <li>{user.id}</li>
+          </ul>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default test;
