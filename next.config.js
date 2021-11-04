@@ -8,4 +8,8 @@ module.exports = {
   },
   // サーバーサイド以外でも環境変数を使えるようにする
   // どこでも process.env.* で環境変数が利用できる
+  webpack(config) {
+    config.infrastructureLogging = { debug: /PackFileCache/ };
+    return config;
+  },
 };
