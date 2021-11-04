@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "allowJs": false, //change
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": false,
-    "noEmit": true,
+    "noEmit": true, // Do not compile the JS (or TS) files in this project on build
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "baseUrl": "./src"
   },
-  "include": ["src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", "test.ts"],
+  "exclude": ["node_modules", "test.ts"]
 }
