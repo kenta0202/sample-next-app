@@ -1,6 +1,6 @@
-import { ContactParams } from "interfaces/ContactParams";
-import { useFormState } from "state/contact/useFormState";
-import { useSendContactForm } from "state/contact/useSendContactForm";
+import { ContactParams } from "types/ContactParams";
+import { useFormState } from "hooks/contact/useFormState";
+import { useSendContactForm } from "hooks/contact/useSendContactForm";
 
 const Contact: React.VFC = () => {
   const [contact, handleChange] = useFormState<ContactParams>({
@@ -15,10 +15,10 @@ const Contact: React.VFC = () => {
   };
 
   return (
-    <div>
+    <div className="p-2 my-2 mx-2 bg-red-200 rounded-lg">
       <h2>お問い合わせ</h2>
       {errorMessage && <p>{errorMessage}</p>}
-      <form method="post" onSubmit={handleSubmit}>
+      <form method="post" onSubmit={handleSubmit} className=" space-y-2">
         <div className="">
           <label>お名前</label>
           <div>

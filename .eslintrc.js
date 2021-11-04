@@ -12,7 +12,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.eslint.json"],
   },
-  plugins: ["@typescript-eslint", "tailwindcss"],
+  plugins: ["@typescript-eslint", "tailwindcss", "react-hooks"],
   extends: [
     "next",
     "next/core-web-vitals",
@@ -24,12 +24,20 @@ module.exports = {
   rules: {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
+    "react-hooks/exhaustive-deps": "error",
   },
   ignorePatterns: [
     ".eslintrc.js",
     "tailwind.config.js",
     "next.config.js",
     "next-env.d.ts",
+    "useSendContactForm.ts",
+    "userState.ts",
   ],
   plugins: ["jest"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 };

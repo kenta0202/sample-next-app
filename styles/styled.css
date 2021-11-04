@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-whitegrey text-darkgrey;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-semibold text-darkgrey bg-whitegrey border-2 border-darkgrey  dark:text-whitegrey dark:bg-darkgrey dark:border-whitegrey  hover:opacity-70 shadow-md py-1 px-4 rounded-2xl;
+  }
+}
+
+@layer utilities {
+  .p-21 {
+    padding: 5.5rem;
+  }
+  @variants hover,focus {
+  }
+}
+
+@screen sm {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+}

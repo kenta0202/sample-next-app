@@ -1,0 +1,46 @@
+GET  https://api.themoviedb.org/3/trending/all/week?api_key=149730edbce538ea88b8e9d7ef2601dd&language=en-US
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:3001/books
+
+###
+
+GET http://127.0.0.1:3001/book/60f90cd3641251388b6cdc4f
+
+###
+
+POST  http://127.0.0.1:3001/book
+content-type: application/json
+
+{
+"author":"JKローリング",
+"title":"ああaaaaa"
+}
+
+###
+
+POST  http://127.0.0.1:3001/book
+content-type: application/json
+
+{
+"name":"Harry Potter3",
+"published":"2060",
+"author":"JKローリング2",
+"title":"いい"
+}
+
+###
+DELETE   http://127.0.0.1:3001/book/60f90cd3641251388b6cdc4f
+content-type: application/json
+
+###
+
+PUT    http://127.0.0.1:3001/book/60f920f0ee202111380f513d
+content-type: application/json
+
+{
+"author":"JKローリング5",
+"title":"いい5"
+}

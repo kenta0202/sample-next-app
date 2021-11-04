@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { GetStaticProps, GetStaticPaths } from "next";
 
-import { User } from "../../interfaces";
-import { sampleUserData } from "../../utils/sample-data";
+import { User } from "../../types";
+import { sampleUserData } from "../../data/sample-data";
 import Layout from "../../components/Layout";
 import ListDetail from "../../components/ListDetail";
 
@@ -34,7 +35,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 
 export default StaticPropsDetail;
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   // Get the paths we want to pre-render based on users
   const paths = sampleUserData.map((user) => ({
     params: { id: user.id.toString() },
@@ -48,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do
 // direct database queries.
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = ({ params }) => {
   try {
     const id = params?.id;
     const item = sampleUserData.find((data) => data.id === Number(id));
@@ -56,6 +57,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     // will receive `item` as a prop at build time
     return { props: { item } };
   } catch (err) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     return { props: { errors: err.message } };
   }
 };

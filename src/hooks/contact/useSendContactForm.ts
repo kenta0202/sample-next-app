@@ -1,4 +1,4 @@
-import { ContactParams } from "interfaces/ContactParams";
+import { ContactParams } from "types/ContactParams";
 import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 

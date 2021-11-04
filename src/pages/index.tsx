@@ -1,28 +1,37 @@
-import { Darkmode } from "components/Darkmode";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import { ChevronRightIcon } from "@heroicons/react/outline";
-import Contact from "components/contact";
+import { headInformation } from "data/headInformation";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <Darkmode />
-    <p>
-      <span>
-        次のページへ
-        <ChevronRightIcon className="inline w-3 h-3 align-middle translate-x-0.5 -translate-y-0.5" />
-      </span>
-    </p>
+import React from "react";
 
-    <h1>Hello!! Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-    <p className=" text-red-500">Test</p>
-    <Contact />
-  </Layout>
-);
+const head = headInformation.top;
+
+const IndexPage: React.VFC = () => {
+  return (
+    <Layout title={head.title} metaDescription={head.metaDescription}>
+      <br />
+      <div className="container mx-auto">
+        <span id="test">
+          次のページへ
+          <ChevronRightIcon className=" inline w-3 h-3 align-middle translate-x-0.5 -translate-y-0.5" />
+        </span>
+        <br />
+        <div>
+          <Link href={{ pathname: "/about", query: { name: "Zeit" } }}>
+            <a>queryをおくる</a>
+          </Link>
+        </div>
+        <br />
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi,
+          consectetur corporis fuga debitis repellat ab ipsa laborum odio iste
+          tempora cupiditate necessitatibus ut possimus dolores rerum vero.
+          Iusto, obcaecati!
+        </p>
+      </div>
+    </Layout>
+  );
+};
 
 export default IndexPage;

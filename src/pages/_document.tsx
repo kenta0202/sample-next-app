@@ -6,9 +6,12 @@ import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 class Document extends NextDocument {
   render() {
     return (
-      <Html>
+      <Html prefix="og: http://ogp.me/ns#">
         <Head />
-        <body className="min-h-screen dark:text-gray-50 bg-gray-100 dark:bg-darkgrey">
+        <body
+          id="#"
+          className="min-h-screen dark:text-gray-300 dark:bg-darkgrey"
+        >
           <Main />
           <NextScript />
         </body>

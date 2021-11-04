@@ -16,7 +16,9 @@
     "next": "latest",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-scroll": "^1.8.4",
+    "recoil": "^0.4.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
@@ -30,6 +32,7 @@
     "eslint": "^8.0.1",
     "eslint-config-next": "^11.1.2",
     "eslint-plugin-jest": "^25.2.1",
+    "eslint-plugin-react-hooks": "^4.2.1-alpha-5ca4b0433-20211020",
     "eslint-plugin-tailwindcss": "^1.17.0",
     "jest-enzyme": "^7.1.2",
     "postcss-cli": "^9.0.1",

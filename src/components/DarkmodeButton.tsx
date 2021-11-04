@@ -13,15 +13,23 @@ export const Darkmode = () => {
     <button
       aria-label="DarkModeToggle"
       type="button"
-      className="p-3 w-12 h-12"
+      className="group w-12 h-12"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {mounted && (
         <>
           {theme === "dark" ? (
-            <MoonIcon height={"25"} width={"25"} />
+            <MoonIcon
+              className=" group-hover:scale-125"
+              height={"25"}
+              width={"25"}
+            />
           ) : (
-            <SunIcon height={"25"} width={"25"} />
+            <SunIcon
+              className=" group-hover:scale-125"
+              height={"25"}
+              width={"25"}
+            />
           )}
         </>
       )}
