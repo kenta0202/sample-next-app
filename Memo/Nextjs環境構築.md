@@ -63,3 +63,13 @@
   - "lint": "eslint . src --ext .ts,.tsx",
   - "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix"
   - "eslintIgnore": ["/.eslintrc.js"]
+
+## Firebase
+
+- npm i -g firebase-tools
+- npm i -D firebase
+- firebase login
+- firebase init
+- build が本番用
+- npm run build
+- firebase deploy
