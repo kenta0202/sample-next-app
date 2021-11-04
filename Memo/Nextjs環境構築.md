@@ -63,6 +63,7 @@
   - "lint": "eslint . src --ext .ts,.tsx",
   - "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix"
   - "eslintIgnore": ["/.eslintrc.js"]
+- npm i -D eslint
 
 ## Firebase
 
@@ -73,3 +74,4 @@
 - build が本番用
 - npm run build
 - firebase deploy
+  https://gist.github.com/LeeDDHH/e0eb75f87f48cd5c5a613a692c66ac78
