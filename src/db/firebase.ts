@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import firebase from "firebase/compat/app";
-import "firebase/firestore";
+import "firebase/compat/firestore";
 
 firebase.apps.length
   ? firebase.app()
@@ -14,4 +13,4 @@ firebase.apps.length
       appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     });
 
-export const firestore = firebase.firestore();
+export const db = firebase.firestore();
