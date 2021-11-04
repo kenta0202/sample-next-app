@@ -6,7 +6,7 @@ import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 class Document extends NextDocument {
   render() {
     return (
-      <Html prefix="og: http://ogp.me/ns#">
+      <Html lang="ja" prefix="og: http://ogp.me/ns#">
         <Head />
         <body
           id="#"
