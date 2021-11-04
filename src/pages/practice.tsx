@@ -1,4 +1,4 @@
-import Contact from "components/Contact";
+// import Contact from "components/Contact";
 import Layout from "components/Layout";
 import React from "react";
 import { headInformation } from "data/headInformation";
@@ -14,12 +14,12 @@ const practice = () => {
         tools="状態管理ツールRecoil"
       />
       <TodoArea />
-      <Heading
+      {/* <Heading
         title="Contact"
         feature="CRUD(Create,Read,Update,Delete)"
         tools="状態管理ツールRecoil"
-      />
-      <Contact />
+      /> */}
+      {/* <Contact /> */}
     </Layout>
   );
 };

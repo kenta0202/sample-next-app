@@ -52,6 +52,8 @@
   - "eslintIgnore": ["/.eslintrc.js"]
 - .env.local ファイルの作成
   - {process.env.NEXT_PUBLIC_FOO}で使用できる
+- npm install --save-dev @types/node
+  - TypeScript で、この Node.js が提供するモジュールを扱うため
 
 ## Eslint
 
