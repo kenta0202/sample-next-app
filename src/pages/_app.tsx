@@ -3,7 +3,6 @@ import type { AppProps } from "next/app";
 import React from "react";
 import { ThemeProvider } from "next-themes";
 import { RecoilRoot } from "recoil";
-// import { firestore } from "db/firebase";
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
