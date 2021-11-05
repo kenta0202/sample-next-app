@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
-
 import { User } from "../../types";
 import { sampleUserData } from "../../data/sample-data";
 import Layout from "../../components/Layout";
@@ -26,11 +25,7 @@ const WithStaticProps = ({ items }: Props) => (
   </Layout>
 );
 
-// eslint-disable-next-line @typescript-eslint/require-await
-export const getStaticProps: GetStaticProps = async () => {
-  // Example for including static props in a Next.js function component page.
-  // Don't forget to include the respective types for any props passed into
-  // the component.
+export const getStaticProps: GetStaticProps = () => {
   const items: User[] = sampleUserData;
   return { props: { items } };
 };
