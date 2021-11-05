@@ -34,6 +34,8 @@ module.exports = {
     "useSendContactForm.ts",
     "userState.ts",
     "firebase.ts",
+    "blog.js",
+    "postcss.config.js",
   ],
   plugins: ["jest"],
   settings: {

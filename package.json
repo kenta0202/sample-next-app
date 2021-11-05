@@ -14,6 +14,7 @@
     "@heroicons/react": "^1.0.4",
     "enzyme-adapter-react-16": "^1.15.6",
     "firebase": "^9.3.0",
+    "microcms-js-sdk": "^2.0.0",
     "next": "latest",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
