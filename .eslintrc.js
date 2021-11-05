@@ -33,6 +33,7 @@ module.exports = {
     "next-env.d.ts",
     "useSendContactForm.ts",
     "userState.ts",
+    "firebase.ts",
   ],
   plugins: ["jest"],
   settings: {
