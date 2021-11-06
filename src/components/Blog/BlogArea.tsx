@@ -9,7 +9,7 @@ type Props = {
 
 export const BlogArea: React.VFC<Props> = ({ blogs }: Props) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 mt-5 text-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-5 text-center">
       {blogs.map((blog) => (
         <Blog blog={blog} key={blog.id} />
       ))}

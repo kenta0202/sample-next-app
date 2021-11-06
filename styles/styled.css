@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-whitegrey text-darkgrey;
+    @apply bg-whitegrey text-darkgrey no-scrollbar;
   }
 }
 
@@ -18,12 +18,10 @@
   .p-21 {
     padding: 5.5rem;
   }
-  @variants hover,focus {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-}
 
-@screen sm {
-  .rotate-0 {
-    transform: rotate(0deg);
+  @variants hover,focus {
   }
 }

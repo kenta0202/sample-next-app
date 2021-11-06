@@ -36,6 +36,7 @@ module.exports = {
     "firebase.ts",
     "blog.js",
     "postcss.config.js",
+    "scroll.js",
   ],
   plugins: ["jest"],
   settings: {

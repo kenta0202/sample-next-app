@@ -20,6 +20,24 @@ module.exports = {
       "3/4": "75%",
       full: "100%",
     },
+    screens: {
+      // xl: { min: "1279px" },
+      // // => @media (min-width: 1279px) { ... }
+
+      // lg: { min: "1023px" },
+      // // => @media (min-width: 1023px) { ... }
+
+      // md: { min: "767px" },
+      // // => @media (min-width: 767px) { ... }
+
+      // sm: { min: "639px" },
+      // // => @media (min-width: 639px) { ... }
+      sm: "639px",
+      md: "767px",
+      lg: "1023px",
+      xl: "1279px",
+      "3xl": "1800px",
+    },
     // spacing: { 96: "96%" },
   },
   variants: {

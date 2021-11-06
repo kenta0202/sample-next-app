@@ -1,6 +1,10 @@
 module.exports = {
   images: {
-    domains: ["links.papareact.com", "source.unsplash.com"],
+    domains: [
+      "links.papareact.com",
+      "source.unsplash.com",
+      "images.microcms-assets.io",
+    ],
   },
   //   next.config.js に使用する外部ドメインを設定
   env: {

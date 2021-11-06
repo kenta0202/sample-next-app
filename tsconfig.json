@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "baseUrl": "./src"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "public/js"],
   // "include": ["src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", "db"],
   "exclude": ["node_modules", "test.ts", "firebase"]
 }

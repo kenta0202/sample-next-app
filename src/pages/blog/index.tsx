@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react";
 import Layout from "components/Layout";
@@ -6,14 +7,19 @@ import { GetStaticProps } from "next";
 import { Blog as TBlog } from "types/Blog";
 import { BlogArea } from "components/Blog/BlogArea";
 
+/*
+http://taso.blog.jp/archives/12241577.html
+カテゴリ別表示
+月別アーカイブ別表示
+最新記事を表示
+記事検索
+
+*/
 type Props = {
   blogs: TBlog[];
 };
 
-const aaa: React.VFC<Props> = ({ blogs }: Props) => {
-  // {
-  //   console.log({ blogs });
-  // }
+const index: React.VFC<Props> = ({ blogs }: Props) => {
   return (
     <Layout>
       <BlogArea blogs={blogs} />
@@ -21,14 +27,12 @@ const aaa: React.VFC<Props> = ({ blogs }: Props) => {
   );
 };
 
-export default aaa;
+export default index;
 
 export const getStaticProps: GetStaticProps = async () => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const data = await client.get({
     endpoint: "blog",
     queries: { depth: 1 },
   });
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   return { props: { blogs: data.contents } };
 };
