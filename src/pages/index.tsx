@@ -8,6 +8,10 @@ import React from "react";
 const head = headInformation.top;
 
 const IndexPage: React.VFC = () => {
+  {
+    console.log(process.env.NEXT_PUBLIC_FOO);
+    console.log(process.env.FOO);
+  }
   return (
     <Layout title={head.title} metaDescription={head.metaDescription}>
       <br />
