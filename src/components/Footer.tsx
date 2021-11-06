@@ -17,7 +17,7 @@ export const Footer = () => {
       </div>
 
       <footer>
-        <div className="mt-4 w-full text-gray-300 bg-darkgrey dark:border-t dark:border-whitegrey">
+        <div className="mt-8 w-full text-gray-300 bg-darkgrey dark:border-t dark:border-whitegrey">
           <div className="flex flex-row items-center p-1 mt-2">
             <div className="flex-1 text-sm tracking-wide leading-8 text-center">
               Copyright © 2021 k-naito All Rights Reserved.

@@ -20,36 +20,47 @@ export const Blog: React.VFC<Props> = ({ blog }: Props) => {
     var BlogDate = `${year}年${month}月${day}日(${dayname[dayofweek]})`;
   }
   return (
-    <div key={blog.id} className="">
+    <div key={blog.id} className="container">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
         <a>
-          <ul className="flex flex-col gap-2">
-            <li>
-              {blog.image ? (
-                <Img src={blog.image.url} alt="" width="100px" height="100px" />
-              ) : (
-                <Img
-                  src="https://source.unsplash.com/weekly?cat"
-                  alt=""
-                  width="100px"
-                  height="100px"
-                />
-              )}
-            </li>
-            <li className="flex flex-row gap-2 justify-center items-center text-sm">
-              <ClockIcon className="h-4" />
-              <div>{BlogDate}</div>
-            </li>
-            <li className="flex flex-row gap-2 justify-center items-center text-sm">
-              <TagIcon className="h-4" />
-              <div className="py-[2px] px-2 rounded-md border-[1px] hover:border-b-[1px]">
-                {blog.category}
+          <div className="border-b border-darkgrey dark:border-whitegrey  mx-auto  max-w-xs ">
+            <ul className=" justify-center flex flex-row gap-3 items-start p-1 pb-2    hover:bg-whitegreyafter dark:hover:bg-darkgreyafter rounded-md">
+              <div className=" ">
+                {blog.image ? (
+                  <Img
+                    className="rounded-lg"
+                    src={blog.image.url}
+                    alt=""
+                    width="80px"
+                    height="80px"
+                  />
+                ) : (
+                  <Img
+                    src="https://source.unsplash.com/weekly?cat"
+                    alt=""
+                    width="80px"
+                    height="80px"
+                    className="rounded-lg"
+                  />
+                )}
               </div>
-            </li>
-            <li className="text-lg font-semibold">
-              <span className="hover:border-b-[1px]">{blog.title}</span>
-            </li>
-          </ul>
+              <div className="flex flex-col gap-2   ">
+                <li className="text-lg font-semibold text-left">
+                  <span className="hover:border-b-[1px]">{blog.title}</span>
+                </li>
+                <li className="flex flex-row gap-1 text-xs text-left">
+                  <ClockIcon className="h-4" />
+                  <div>{BlogDate}</div>
+                </li>
+                <li className="flex flex-row gap-1 text-xs text-center">
+                  <TagIcon className="h-4 mt-1" />
+                  <div className=" px-2 rounded-md border-[1px] hover:border-b-[1px] border-darkgrey">
+                    {blog.category}
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
         </a>
       </Link>
     </div>

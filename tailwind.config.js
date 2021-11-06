@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        darkgreyafter: "#4b5058", //darkModeで使用したい色を拡張定義
         darkgrey: "#222831", //darkModeで使用したい色を拡張定義
-        whitegrey: "rgb(230,230,230)",
+        whitegrey: "#e6e6e6",
+        whitegreyafter: "#f0f0f0",
       },
     },
     minWidth: {
@@ -37,6 +39,15 @@ module.exports = {
       lg: "1023px",
       xl: "1279px",
       "3xl": "1800px",
+    },
+    borderWidth: {
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
     },
     // spacing: { 96: "96%" },
   },

@@ -40,9 +40,9 @@ const Layout = ({
 
       <meta property="og:image" content=" サムネイル画像の URL" />
     </Head>
-    <div className="flex flex-col w-screen h-screen">
+    <div className="flex flex-col w-screen h-screen divide-darkgrey dark:divide-whitegrey">
       <Header />
-      <main className=" flex-1">{children}</main>
+      <main className=" flex-1 px-[16px] ">{children}</main>
       <Footer />
     </div>
   </div>
