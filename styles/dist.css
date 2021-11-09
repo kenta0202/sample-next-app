@@ -701,10 +701,6 @@ video {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-.mx-5 {
-	margin-left: 1.25rem;
-	margin-right: 1.25rem;
-}
 .mr-2 {
 	margin-right: 0.5rem;
 }
@@ -826,9 +822,6 @@ video {
 .justify-end {
 	justify-content: flex-end;
 }
-.justify-center {
-	justify-content: center;
-}
 .justify-between {
 	justify-content: space-between;
 }
@@ -899,14 +892,11 @@ video {
 .p-2 {
 	padding: 0.5rem;
 }
-.p-1 {
-	padding: 0.25rem;
-}
-.p-4 {
-	padding: 1rem;
-}
 .p-3 {
 	padding: 0.75rem;
+}
+.p-1 {
+	padding: 0.25rem;
 }
 .px-\[16px\] {
 	padding-left: 16px;
