@@ -4,6 +4,7 @@ module.exports = {
       "links.papareact.com",
       "source.unsplash.com",
       "images.microcms-assets.io",
+      "placehold.it",
     ],
   },
   //   next.config.js に使用する外部ドメインを設定

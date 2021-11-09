@@ -8,7 +8,8 @@ type Props = {
   blog: TBlog;
 };
 
-export const Blog: React.VFC<Props> = ({ blog }: Props) => {
+export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
+  // console.dir(blog);
   {
     const date = new Date(blog.publishedAt);
     const year = date.getFullYear();
@@ -23,8 +24,8 @@ export const Blog: React.VFC<Props> = ({ blog }: Props) => {
     <div key={blog.id} className="container">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
         <a>
-          <div className="border-b border-darkgrey dark:border-whitegrey  mx-auto  max-w-xs ">
-            <ul className=" justify-center flex flex-row gap-3 items-start p-1 pb-2    hover:bg-whitegreyafter dark:hover:bg-darkgreyafter rounded-md">
+          <div className="mx-auto max-w-xs border-b border-darkgrey dark:border-whitegrey">
+            <ul className="flex flex-row gap-3 justify-start items-start p-1 pb-2 hover:bg-whitegreyafter dark:hover:bg-darkgreyafter rounded-md">
               <div className=" ">
                 {blog.image ? (
                   <Img
@@ -53,8 +54,8 @@ export const Blog: React.VFC<Props> = ({ blog }: Props) => {
                   <div>{BlogDate}</div>
                 </li>
                 <li className="flex flex-row gap-1 text-xs text-center">
-                  <TagIcon className="h-4 mt-1" />
-                  <div className=" px-2 rounded-md border-[1px] hover:border-b-[1px] border-darkgrey">
+                  <TagIcon className="mt-1 h-4" />
+                  <div className=" px-2 rounded-md border-[1px] hover:border-b-[1px] border-darkgrey dark:border-whitegrey">
                     {blog.category}
                   </div>
                 </li>

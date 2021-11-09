@@ -49,7 +49,9 @@ module.exports = {
       6: "6px",
       8: "8px",
     },
-    // spacing: { 96: "96%" },
+    width: {
+      96: "96%",
+    },
   },
   variants: {
     extend: {},

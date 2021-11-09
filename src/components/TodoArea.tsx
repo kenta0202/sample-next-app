@@ -114,19 +114,11 @@ const TodoArea = () => {
       <ul className="container flex flex-col gap-3 ml-4">
         {todoListInfo.map((todoList) => {
           return (
-            // eslint-disable-next-line react/jsx-key
             <div className=" container flex items-center" key={todoList.id}>
-              {todoList.id > 9 ? (
-                <li className="mr-4 min-w-1/3 text-lg">
-                  <span className="mr-3">{todoList.id}</span>
-                  {todoList.title}
-                </li>
-              ) : (
-                <li className="mr-4 min-w-1/3 text-lg">
-                  <span className="mr-5">{todoList.id}</span>
-                  {todoList.title}
-                </li>
-              )}
+              <li className="mr-4 min-w-1/3 text-lg">
+                <span className="mr-3">{todoList.id}</span>
+                {todoList.title}
+              </li>
               <input
                 type="checkbox"
                 value={todoList.title}

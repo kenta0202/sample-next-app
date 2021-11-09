@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { headInformation } from "data/headInformation";
-
+import Img from "next/image";
 import React from "react";
 
 const head = headInformation.top;
@@ -15,6 +16,20 @@ const IndexPage: React.VFC = () => {
   return (
     <Layout title={head.title} metaDescription={head.metaDescription}>
       <br />
+
+      {/* イメージマップ */}
+      <Img
+        src="https://placehold.it/350x150"
+        alt="サンプル"
+        useMap="#primary"
+        width="350px"
+        height="150px"
+      />
+      <map name="primary">
+        <area shape="circle" coords="75,75,75" href="left.html" />
+        <area shape="circle" coords="275,75,75" href="right.html" />
+      </map>
+
       <div className="container mx-auto">
         <span id="test">
           次のページ
