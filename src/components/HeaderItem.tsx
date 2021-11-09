@@ -7,9 +7,9 @@ export const HeaderItem = ({ Icon, title, href }) => {
   return (
     <Link href={href}>
       <a>
-        <div className="group flex flex-col items-center font-black hover:opacity-75 w-12 md:w-20 lg:w-24 sm:w-16">
-          <Icon className=" mt-2 h-8 group-hover:animate-bounce " />
-          <div className="">{title}</div>
+        <div className="group flex flex-col items-center font-black hover:opacity-75 w-12 md:w-20 lg:w-24 sm:w-16 mx-2 ">
+          <Icon className=" mt-2 h-6 lg:h-12 md:h-10 sm:h-6 group-hover:animate-bounce " />
+          <div className=" text-xs md:text-base sm:text-sm">{title}</div>
         </div>
       </a>
     </Link>

@@ -12,7 +12,7 @@ export const Header = () => {
     <>
       <header className="  flex sticky top-0 z-10 justify-between pb-2 bg-whitegrey dark:bg-darkgrey border-b-[1px] border-darkgrey dark:border-whitegrey">
         <div className=" ">
-          <nav className="flex gap-4  ">
+          <nav className="flex gap-2  ">
             <HeaderItem title="ホーム" Icon={HomeIcon} href="/" />
             <HeaderItem title="ブログ" Icon={BookOpenIcon} href="/blog" />
             <HeaderItem

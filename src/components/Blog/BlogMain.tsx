@@ -21,7 +21,7 @@ export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
     var BlogDate = `${year}年${month}月${day}日(${dayname[dayofweek]})`;
   }
   return (
-    <div key={blog.id} className="container">
+    <div key={blog.id} className="">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
         <a>
           <div className="mx-auto max-w-xs border-b border-darkgrey dark:border-whitegrey">
