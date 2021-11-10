@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/General/Layout";
 import { Link as Scroll } from "react-scroll";
 
 const ScrollPage: React.VFC = () => {

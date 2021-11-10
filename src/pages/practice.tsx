@@ -1,9 +1,9 @@
 // import Contact from "components/Contact";
-import Layout from "components/Layout";
+import Layout from "components/General/Layout";
 import React from "react";
 import { headInformation } from "data/headInformation";
-import TodoArea from "components/TodoArea";
-import { Heading } from "components/Heading";
+import TodoArea from "components/Practice/TodoArea";
+import { Heading } from "components/Practice/Heading";
 const practice = () => {
   const head = headInformation.practice;
   return (

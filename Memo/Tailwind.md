@@ -1,9 +1,0 @@
-- bg-gradient-to-r from-darkgrey via-pink-500 to-yellow-500
-- whitespace
-- cursor-pointer
-- transition
-- duration-100
-- transform
-- scale-125
-- overflow
-- space

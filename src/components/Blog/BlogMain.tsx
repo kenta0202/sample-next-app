@@ -24,7 +24,7 @@ export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
     <div key={blog.id} className="">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
         <a>
-          <div className="mx-auto max-w-xs border-b border-darkgrey dark:border-whitegrey">
+          <div className="mx-auto max-w-xs border-b border-[#a1a7ab] dark:border-whitegrey">
             <ul className="flex flex-row gap-3 justify-start items-start p-1 pb-2 hover:bg-whitegreyafter dark:hover:bg-darkgreyafter rounded-md">
               <div className=" ">
                 {blog.image ? (
@@ -55,7 +55,7 @@ export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
                 </li>
                 <li className="flex flex-row gap-1 text-xs text-center">
                   <TagIcon className="mt-1 h-4" />
-                  <div className=" px-2 rounded-md border-[1px] hover:border-b-[1px] border-darkgrey dark:border-whitegrey">
+                  <div className=" flex justify-center items-center px-[6px] py-[2px]  rounded-xl border-[1px] hover:border-b-[1px] border-darkgrey dark:border-whitegrey">
                     {blog.category}
                   </div>
                 </li>

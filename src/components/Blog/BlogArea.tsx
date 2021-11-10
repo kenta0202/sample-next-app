@@ -21,15 +21,17 @@ export const BlogArea: React.VFC<Props> = ({ blogs }: Props) => {
   const category = [
     ...new Set(blogs.map(({ category }) => category).flat()),
   ] as string[];
-
+  const ContentsPerPage = 8;
   const newblogs = query_pageNumber
-    ? blogs.slice((query_pageNumber - 1) * 4, query_pageNumber * 4)
-    : blogs.slice(0, 4);
+    ? blogs.slice(
+        (query_pageNumber - 1) * ContentsPerPage,
+        query_pageNumber * ContentsPerPage
+      )
+    : blogs.slice(0, ContentsPerPage);
 
   return (
     <>
       <BlogCategory category={category} />
-      <ChangePageArea blogs={blogs} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-5 text-center">
         {newblogs.map((blog) => {
           if (!query_category) {
@@ -42,6 +44,7 @@ export const BlogArea: React.VFC<Props> = ({ blogs }: Props) => {
             );
         })}
       </div>
+      <ChangePageArea blogs={blogs} />
     </>
   );
 };

@@ -1,10 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Layout from "../components/Layout";
-import { ChevronRightIcon } from "@heroicons/react/outline";
+import Layout from "../components/General/Layout";
 import { headInformation } from "data/headInformation";
-import Img from "next/image";
+// import Img from "next/image";
 import React from "react";
+import { Tabs } from "components/HeadlessUI/Tabs";
+import { Transition } from "components/HeadlessUI/Transition";
+import { Container } from "components/Sample/Container";
+import Switch from "components/HeadlessUI/Switch";
+import { RadioGroup } from "components/HeadlessUI/RadioGroup";
+import { Popover } from "components/HeadlessUI/Popover";
+import { Menu } from "components/HeadlessUI/Menu";
+import { ListBox } from "components/HeadlessUI/ListBox";
+import { Disclosure } from "components/HeadlessUI/Disclosure";
+import { Dialog } from "components/HeadlessUI/Dialog";
 
 const head = headInformation.top;
 
@@ -15,10 +24,23 @@ const IndexPage: React.VFC = () => {
   }
   return (
     <Layout title={head.title} metaDescription={head.metaDescription}>
+      {/* <ListBox2 /> */}
+      {/* HeadlessUIサンプル */}
+      <Container title="#Tabs" component={<Tabs />} />
+      <Container title="#Transition" component={<Transition />} />
+      <Container title="#Switch" component={<Switch />} />
+      <Container title="#RadioGroup" component={<RadioGroup />} />
+      <Container title="#Popover" component={<Popover />} />
       <br />
+      <br />
+      <Container title="#Menu" component={<Menu />} />
+      <Container title="#ListBox" component={<ListBox />} />
+      <Container title="#Disclosure" component={<Disclosure />} />
+      <Container title="#Dialog" component={<Dialog />} />
 
+      <br />
       {/* イメージマップ */}
-      <Img
+      {/* <Img
         src="https://placehold.it/350x150"
         alt="サンプル"
         useMap="#primary"
@@ -28,26 +50,12 @@ const IndexPage: React.VFC = () => {
       <map name="primary">
         <area shape="circle" coords="75,75,75" href="left.html" />
         <area shape="circle" coords="275,75,75" href="right.html" />
-      </map>
+      </map> */}
 
-      <div className="container mx-auto">
-        <span id="test">
-          次のページ
-          <ChevronRightIcon className=" inline w-3 h-3 align-middle translate-x-0.5 -translate-y-0.5" />
-        </span>
-        <br />
-        <div>
-          <Link href={{ pathname: "/about", query: { name: "Zeit" } }}>
-            <a>queryをおくる</a>
-          </Link>
-        </div>
-        <br />
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi,
-          consectetur corporis fuga debitis repellat ab ipsa laborum odio iste
-          tempora cupiditate necessitatibus ut possimus dolores rerum vero.
-          Iusto, obcaecati!
-        </p>
+      <div>
+        <Link href={{ pathname: "/about", query: { name: "Zeit" } }}>
+          <a>queryをおくる</a>
+        </Link>
       </div>
     </Layout>
   );

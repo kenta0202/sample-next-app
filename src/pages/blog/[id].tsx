@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from "react";
 import { GetStaticProps, GetStaticPaths } from "next";
-import Layout from "components/Layout";
+import Layout from "components/General/Layout";
 import { blog as client } from "lib/HeadlessCMS/blog";
 import { Blog } from "types/Blog";
 
