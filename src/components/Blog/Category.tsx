@@ -30,7 +30,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
           </div>
         </Lb.Button>
         <Lb.Options>
-          <div className="p-1 py-1 mt-1 space-y-[6px] w-32 max-h-60 text-base sm:text-sm bg-white rounded-md ring-1 ring-black ring-opacity-10 shadow-lg focus:outline-none">
+          <div className="p-1 py-1 mt-1 space-y-[6px] w-32 max-h-60 text-base sm:text-sm bg-white rounded-md shadow-lg focus:outline-none">
             {category.map((v) => (
               <Lb.Option key={v} value={v} as={Fragment}>
                 {({ active, selected }) => (
