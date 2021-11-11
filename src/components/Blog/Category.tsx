@@ -19,7 +19,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
     <>
       <Lb value={selectedCategory} onChange={setSelectedCategory}>
         <Lb.Button>
-          <div className="flex flex-row gap-3 items-center py-1 px-2 mt-8 mb-2 w-32 dark:text-darkgrey bg-white dark:bg-whitegrey rounded-md">
+          <div className="flex flex-row gap-3 items-center py-1 px-2 mt-8 mb-2 w-32 dark:text-darkgrey bg-white dark:bg-whitegrey rounded-md ">
             <span className="truncate ">{selectedCategory}</span>{" "}
             <span className="flex flex-1 justify-end">
               <SelectorIcon
@@ -30,7 +30,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
           </div>
         </Lb.Button>
         <Lb.Options>
-          <div className="p-1 py-1 mt-1 space-y-[6px] w-32 max-h-60 text-base sm:text-sm bg-white rounded-md shadow-lg focus:outline-none">
+          <div className="p-1 py-1 mt-1 space-y-[6px] w-32 max-h-60 text-base sm:text-sm bg-white rounded-md shadow-lg ">
             {category.map((v) => (
               <Lb.Option key={v} value={v} as={Fragment}>
                 {({ active, selected }) => (
