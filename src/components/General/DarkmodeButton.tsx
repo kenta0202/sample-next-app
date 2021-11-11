@@ -27,7 +27,7 @@ export const Darkmode = () => {
       <span
         aria-hidden="true"
         className={`${enabled ? "translate-x-[-14.5px]" : "translate-x-[15px]"}
-         top-[-22px] relative pointer-events-none inline-block h-[25px] w-[25px] rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200  items-center`}
+         top-[-22px] relative pointer-events-none inline-block h-[25px] w-[25px] rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-300  items-center`}
       />
     </Swi>
   );

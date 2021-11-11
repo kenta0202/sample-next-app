@@ -5,6 +5,8 @@
 - absolute：絶対位置から配置を指定します。
   - relative,absolute は top,right,bottom で場所を変更
 - fixed：絶対位置から配置を指定し、画面をスクロールしても固定
+- colspan=”” :水平方向にセルを結合
+- rowspan=”” :垂直方向にセルを結合する
 
 ## Taiwind
 
@@ -20,3 +22,5 @@
 - ring :Utilities for creating outline rings with box-shadows.
 - translate 変換 移動
 - transition-○○ ease-in-out duration-300
+- col-span-{n}ユーティリティを使用して、要素を n 列に広げます。
+-

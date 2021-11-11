@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { Blog as TBlog } from "types/Blog";
-
+import { ChevronDoubleRightIcon } from "@heroicons/react/outline";
+import { ChevronDoubleLeftIcon } from "@heroicons/react/outline";
 type Props = {
   blogs: TBlog[];
 };
@@ -12,12 +13,12 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
   const ContentsPerPage = 8;
   // クエリ文字列を取得
   const router = useRouter();
-  const query_pageNumber = parseInt(router.query.page as string);
-  console.log(query_pageNumber);
+  // const query_pageNumber = parseInt(router.query.page as string);
+  // console.log(query_pageNumber);
   const [pageNumber, setpageNumber] = useState<number>(1);
-  console.log(pageNumber);
+  // console.log(pageNumber);
   const nextPage = () => {
-    if (pageNumber <= blogs.length / ContentsPerPage) {
+    if (pageNumber <= Math.floor(blogs.length / ContentsPerPage)) {
       setpageNumber(pageNumber + 1);
       void router.push({ query: { page: pageNumber + 1 } });
     }
@@ -28,36 +29,31 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
       void router.push({ query: { page: pageNumber - 1 } });
     }
   };
-  const newblogs = query_pageNumber
-    ? blogs.slice(
-        (query_pageNumber - 1) * ContentsPerPage,
-        query_pageNumber * ContentsPerPage
-      )
-    : blogs.slice(0, ContentsPerPage);
-
-  console.log(query_pageNumber);
-  console.log(newblogs);
 
   return (
-    <div className="flex flex-row justify-center mt-5 space-x-1">
+    <div className="flex flex-row justify-center mt-8 space-x-1">
       <button
         onClick={() => {
           prevPage();
         }}
-        className="py-[2px] px-2 text-xs border-darkgrey hover:opacity-70"
+        className={`${
+          pageNumber == 1 && "hidden"
+        } py-[2px] px-2 text-sm sm:text-sm md:text-md lg:text-lg border-darkgrey hover:opacity-70`}
       >
-        <span className="mr-2">&lt;</span>前のページ
+        <ChevronDoubleLeftIcon className="ml-2 w-6 " />
       </button>
-      <button>
-        <div className="flex justify-center items-center px-2   rounded-full border-[1px] border-darkgrey dark:border-whitegrey hover:opacity-70">
-          {pageNumber}
-        </div>
-      </button>
+
+      <div className="flex justify-center items-center px-2 lg:px-[10px] w-8 font-semibold bg-indigo-200 rounded-full border-darkgrey dark:border-whitegrey">
+        {pageNumber}
+      </div>
       <button
         onClick={() => nextPage()}
-        className="py-[2px] px-2 text-xs border-darkgrey hover:opacity-70"
+        className={`${
+          pageNumber == 1 + Math.floor(blogs.length / ContentsPerPage) &&
+          "hidden"
+        }  py-[2px] px-2 text-sm sm:text-sm md:text-md lg:text-lg border-darkgrey hover:opacity-70`}
       >
-        次のページ <span className="ml-2">&gt;</span>
+        <ChevronDoubleRightIcon className="ml-2 w-6 " />
       </button>
     </div>
   );

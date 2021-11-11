@@ -57,6 +57,15 @@ const IndexPage: React.VFC = () => {
           <a>queryをおくる</a>
         </Link>
       </div>
+      <details>
+        <summary>HTMLとは</summary>
+        <p>HTMLはマークアップ言語の1つです。</p>
+        <p>次のような特徴を持ちます。</p>
+        <ul>
+          <li>Webページを表現する</li>
+          <li>WHATWGにより仕様策定</li>
+        </ul>
+      </details>
     </Layout>
   );
 };

@@ -8,7 +8,7 @@ type Props = {
   blog: TBlog;
 };
 
-export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
+export const Content: React.VFC<Props> = ({ blog }: Props) => {
   // console.dir(blog);
   {
     const date = new Date(blog.publishedAt);
@@ -37,16 +37,16 @@ export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
                   />
                 ) : (
                   <Img
-                    src="https://source.unsplash.com/weekly?cat"
+                    src="https://source.unsplash.com/weekly?dog"
                     alt=""
                     width="80px"
                     height="80px"
-                    className="rounded-lg"
+                    className="rounded-md"
                   />
                 )}
               </div>
               <div className="flex flex-col gap-2   ">
-                <li className="text-lg font-semibold text-left">
+                <li className="font-semibold text-left whitespace-nowrap">
                   <span className="hover:border-b-[1px]">{blog.title}</span>
                 </li>
                 <li className="flex flex-row gap-1 text-xs text-left">
@@ -55,7 +55,7 @@ export const BlogMain: React.VFC<Props> = ({ blog }: Props) => {
                 </li>
                 <li className="flex flex-row gap-1 text-xs text-center">
                   <TagIcon className="mt-1 h-4" />
-                  <div className=" flex justify-center items-center px-[6px] py-[2px]  rounded-xl border-[1px] hover:border-b-[1px] border-darkgrey dark:border-whitegrey">
+                  <div className="flex justify-center items-center py-[2px] px-[2px] font-normal rounded-xl border-darkgrey dark:border-whitegrey">
                     {blog.category}
                   </div>
                 </li>
