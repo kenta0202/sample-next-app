@@ -43,7 +43,7 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
         <ChevronDoubleLeftIcon className="ml-2 w-6 " />
       </button>
 
-      <div className="flex justify-center items-center px-2 lg:px-[10px] w-8 font-semibold bg-indigo-200 rounded-full border-darkgrey dark:border-whitegrey">
+      <div className="flex justify-center items-center px-2 lg:px-[10px] w-8 font-semibold text-darkgrey bg-indigo-200 rounded-full border-darkgrey dark:border-whitegrey">
         {pageNumber}
       </div>
       <button
