@@ -1,8 +1,6 @@
 module.exports = {
   images: {
-    images: {
-      disableStaticImages: true,
-    },
+    disableStaticImages: true,
     domains: [
       "links.papareact.com",
       "source.unsplash.com",
