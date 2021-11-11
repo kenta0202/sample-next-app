@@ -31,7 +31,7 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
   };
 
   return (
-    <div className="flex flex-row justify-center mt-8 space-x-1">
+    <div className="flex flex-row justify-center mx-auto mt-8 space-x-1">
       <button
         onClick={() => {
           prevPage();
@@ -40,7 +40,7 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
           pageNumber == 1 && "hidden"
         } py-[2px] px-2 text-sm sm:text-sm md:text-md lg:text-lg border-darkgrey hover:opacity-70`}
       >
-        <ChevronDoubleLeftIcon className="ml-2 w-6 " />
+        <ChevronDoubleLeftIcon className="ml-2 w-6 text-darkgrey " />
       </button>
 
       <div className="flex justify-center items-center px-2 lg:px-[10px] w-8 font-semibold text-darkgrey bg-indigo-200 rounded-full border-darkgrey dark:border-whitegrey">
@@ -53,7 +53,7 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
           "hidden"
         }  py-[2px] px-2 text-sm sm:text-sm md:text-md lg:text-lg border-darkgrey hover:opacity-70`}
       >
-        <ChevronDoubleRightIcon className="ml-2 w-6 " />
+        <ChevronDoubleRightIcon className="ml-2 w-6 text-darkgrey " />
       </button>
     </div>
   );
