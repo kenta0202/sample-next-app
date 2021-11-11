@@ -18,7 +18,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
   return (
     <>
       <Lb value={selectedCategory} onChange={setSelectedCategory}>
-        <Lb.Button>
+        <Lb.Button className="outline-none">
           <div className="flex flex-row gap-3 items-center py-1 px-2 mt-8 mb-2 w-32 dark:text-darkgrey bg-white dark:bg-whitegrey rounded-md  outline-none ">
             <span className="truncate ">{selectedCategory}</span>{" "}
             <span className="flex flex-1 justify-end">
@@ -29,7 +29,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
             </span>
           </div>
         </Lb.Button>
-        <Lb.Options>
+        <Lb.Options className="outline-none">
           <div className="p-1 py-1 mt-1 space-y-[6px] w-32 max-h-60 text-base sm:text-sm bg-white rounded-md shadow-lg outline-none ">
             {category.map((v) => (
               <Lb.Option key={v} value={v} as={Fragment}>
