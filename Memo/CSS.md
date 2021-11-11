@@ -23,4 +23,4 @@
 - translate 変換 移動
 - transition-○○ ease-in-out duration-300
 - col-span-{n}ユーティリティを使用して、要素を n 列に広げます。
--
+- className={`${!selected && " ml-4"}`}

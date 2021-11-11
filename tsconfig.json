@@ -1,21 +1,24 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false, //change
-    "skipLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"], //コンパイルする際に使用する組み込みライブラリを指定する。
+    "allowJs": false, //trueにしておくと、.jsと.jsxもコンパイル対象に含まれるようになる。
+    "skipLibCheck": true, //*.d.ts ファイルに対する型チェックをスキップ
     "strict": false,
     "forceConsistentCasingInFileNames": false,
     "noEmit": true, // Do not compile the JS (or TS) files in this project on build
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "esnext", //出力するjsのモジュールの仕組みとして何を使用するかを指定する。
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": "./src"
+    "isolatedModules": true, //コンパイル対象のファイル間の関係性を一切無視して、全てのファイルを単一のモジュールとしてコンパイルする。
+    "jsx": "preserve", //tsxファイルをjsxやjsにコンパイルする際の出力の形式を指定
+    "baseUrl": "./src", //相対的なカレントディレクトリをどこにするか指定する
+    "typeRoots": [
+      "./functions/node_modules/@types" // ← functions内のnode_modules/@typesを指定する
+    ]
   },
-  "include": ["src/**/*", "public/js"],
+  "include": ["src/**/*", "public/js"], //コンパイルする対象ファイルを記述する。
   // "include": ["src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", "db"],
-  "exclude": ["node_modules", "test.ts", "firebase"]
+  "exclude": ["node_modules", "test.ts", "firebase"] //コンパイルする対象から外すファイルを記述する。
 }
