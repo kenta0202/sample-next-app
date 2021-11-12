@@ -3,23 +3,20 @@ import React from "react";
 import { Blog as TBlog } from "types/Blog";
 import Img from "next/image";
 import { ClockIcon, TagIcon } from "@heroicons/react/outline";
+import dayjs from "dayjs";
+import "dayjs/locale/ja";
 
 type Props = {
   blog: TBlog;
 };
 
 export const Content: React.VFC<Props> = ({ blog }: Props) => {
-  // console.dir(blog);
-  {
-    const date = new Date(blog.publishedAt);
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDate();
-    const dayofweek = date.getDay();
-    const dayname = ["日", "月", "火", "水", "木", "金", "土"];
-    // eslint-disable-next-line no-var
-    var BlogDate = `${year}年${month}月${day}日(${dayname[dayofweek]})`;
-  }
+  console.dir(blog);
+
+  // 日付の設定
+  dayjs.locale("ja");
+  const BlogDate = dayjs(blog.publishedAt).format("YYYY-MM-DD (ddd)");
+
   return (
     <div key={blog.id} className="">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
