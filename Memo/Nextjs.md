@@ -1,3 +1,5 @@
+# 環境構築
+
 ## nextjs プロジェクトの作成
 
 - npx create-next-app --example with-typescript my-first-next-app2
@@ -75,3 +77,8 @@
 - npm run build
 - firebase deploy
   https://gist.github.com/LeeDDHH/e0eb75f87f48cd5c5a613a692c66ac78
+
+## その他
+
+- Link 要素の as は動的リンクの時に使う
+-

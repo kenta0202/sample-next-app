@@ -34,4 +34,9 @@ index
 - サーバー上にありチームで共有するリモートリポジトリ（マスターリポジトリ）と、自分のパソコン上で管理するローカルリポジトリ
 - git pull [マージ元のリモートリポジトリ名] [マージ先のローカルリポジトリ名]
 - git push [マージ先のリモートリポジトリ名] [マージ元のローカルリポジトリ名]
--
+
+## デプロイ
+
+- git remote add origin https://github.com/kenta0202/initial-next-app.git
+- git branch -M main
+- git push -u origin main

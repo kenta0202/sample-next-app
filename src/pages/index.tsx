@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/General/Layout";
-import { headInformation } from "data/headInformation";
 // import Img from "next/image";
 import React from "react";
 import { Tabs } from "components/HeadlessUI/Tabs";
@@ -15,15 +14,13 @@ import { ListBox } from "components/HeadlessUI/ListBox";
 import { Disclosure } from "components/HeadlessUI/Disclosure";
 import { Dialog } from "components/HeadlessUI/Dialog";
 
-const head = headInformation.top;
-
 const IndexPage: React.VFC = () => {
   {
     console.log(process.env.NEXT_PUBLIC_FOO);
     console.log(process.env.FOO);
   }
   return (
-    <Layout title={head.title} metaDescription={head.metaDescription}>
+    <Layout>
       {/* <ListBox2 /> */}
       {/* HeadlessUIサンプル */}
       <Container title="#Tabs" component={<Tabs />} />
