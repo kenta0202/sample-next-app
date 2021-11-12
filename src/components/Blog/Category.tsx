@@ -19,7 +19,7 @@ export const Category: React.VFC<Props> = ({ category, page }: Props) => {
     <>
       <Lb value={selectedCategory} onChange={setSelectedCategory}>
         <Lb.Button className="outline-none">
-          <div className="flex flex-row gap-3 items-center py-1 px-2 mt-8 mb-2 w-32 dark:text-darkgrey bg-white dark:bg-whitegrey rounded-md  outline-none ">
+          <div className="flex flex-row gap-3 items-center py-1 px-2 mt-8 mb-2 w-32 dark:text-darkgrey bg-white dark:bg-whitegrey rounded-md outline-none">
             <span className="truncate ">{selectedCategory}</span>{" "}
             <span className="flex flex-1 justify-end">
               <SelectorIcon

@@ -54,3 +54,22 @@
 - import dayjs from 'dayjs'
 - const a = dayjs('2019-01-10 17:30:20');
 - a.format('YYYY-MM-DD HH:mm:ss')); // '2019-01-10 17:30:20'
+
+## React Loader Spinner
+
+- npm i react-loader-spinner
+- import Loader from 'react-loader-spinner'
+- <Loader
+  type="Puff"
+  color="#00BFFF"
+  height={100}
+  width={100}
+  timeout={3000} //3 secs
+  />
+
+## SWR:クライアント側でデータ取得
+
+- ページが頻繁に更新されるデータを持ち、データをプリレンダリングする必要がないような場合
+- Client Side Rendering
+- npm i swr
+- import useSWR from "swr";

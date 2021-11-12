@@ -53,7 +53,7 @@ export const ChangePageArea: React.VFC<Props> = ({ blogs }: Props) => {
           "hidden"
         }  py-[2px] px-2 text-sm sm:text-sm md:text-md lg:text-lg border-darkgrey hover:opacity-70`}
       >
-        <ChevronDoubleRightIcon className="ml-2 w-6 text-darkgrey " />
+        <ChevronDoubleRightIcon className="ml-2 w-6 text-darkgrey dark:text-whitegrey " />
       </button>
     </div>
   );

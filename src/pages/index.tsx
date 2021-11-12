@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/General/Layout";
-// import Img from "next/image";
+import Img from "next/image";
 import React from "react";
 import { Tabs } from "components/HeadlessUI/Tabs";
 import { Transition } from "components/HeadlessUI/Transition";
@@ -13,14 +13,30 @@ import { Menu } from "components/HeadlessUI/Menu";
 import { ListBox } from "components/HeadlessUI/ListBox";
 import { Disclosure } from "components/HeadlessUI/Disclosure";
 import { Dialog } from "components/HeadlessUI/Dialog";
+import { useRouter } from "next/router";
+import Loader from "react-loader-spinner";
 
 const IndexPage: React.VFC = () => {
+  const router = useRouter();
   {
+    console.log(router.asPath);
     console.log(process.env.NEXT_PUBLIC_FOO);
-    console.log(process.env.FOO);
   }
   return (
-    <Layout>
+    <Layout title="Home">
+      <div className="m-5 slidein">
+        <Img
+          src="https://source.unsplash.com/weekly?dog"
+          alt=""
+          width="40px"
+          height="40px"
+          className="mt-10 rounded-md"
+        />
+      </div>
+
+      {/* アニメーション */}
+      <Loader type="TailSpin" color="#cfbbbb" height={20} width={20} />
+
       {/* <ListBox2 /> */}
       {/* HeadlessUIサンプル */}
       <Container title="#Tabs" component={<Tabs />} />

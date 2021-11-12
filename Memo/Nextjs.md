@@ -78,7 +78,10 @@
 - firebase deploy
   https://gist.github.com/LeeDDHH/e0eb75f87f48cd5c5a613a692c66ac78
 
-## その他
+# その他
 
 - Link 要素の as は動的リンクの時に使う
--
+- getServerSideProps: リクエストの度に生成される(サーバーサイドレンダリング)
+- getStaticProps: HTML はビルド時に生成され、それぞれのリクエストに対して CDN として再利用される(静的生成)
+- ページのコンテンツが外部データに依存する場合 → getStaticProps
+- ページのパス(path)が外部データに依存する場合 → getStaticPaths

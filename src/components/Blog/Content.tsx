@@ -18,7 +18,7 @@ export const Content: React.VFC<Props> = ({ blog }: Props) => {
   const BlogDate = dayjs(blog.publishedAt).format("YYYY-MM-DD (ddd)");
 
   return (
-    <div key={blog.id} className="">
+    <div key={blog.id} className="fadeup">
       <Link href="/blog/[id]" as={`/blog/${blog.id}`}>
         <a>
           <div className="mx-auto max-w-xs border-b border-[#a1a7ab] dark:border-whitegrey">

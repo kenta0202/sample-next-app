@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react";
 import Layout from "components/General/Layout";
 import { blog as client } from "lib/HeadlessCMS/blog";
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import { Blog as TBlog } from "types/Blog";
 import { BlogArea } from "components/Blog/BlogArea";
 
@@ -21,7 +22,7 @@ type Props = {
 
 const index: React.VFC<Props> = ({ blogs }: Props) => {
   return (
-    <Layout>
+    <Layout title={"KNT.BLOG"}>
       <BlogArea blogs={blogs} />
     </Layout>
   );
@@ -29,7 +30,8 @@ const index: React.VFC<Props> = ({ blogs }: Props) => {
 
 export default index;
 
-export const getStaticProps: GetStaticProps = async () => {
+// export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data = await client.get({
     endpoint: "blog",
     queries: { depth: 1 },
