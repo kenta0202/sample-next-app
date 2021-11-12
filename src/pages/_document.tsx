@@ -12,10 +12,14 @@ import {
 class Document extends NextDocument {
   render() {
     return (
-      <Html lang="ja" prefix="og: http://ogp.me/ns#">
+      <Html
+        lang="ja"
+        prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"
+      >
         <Head>
           <meta name="description" content={SITE_DESCRIPTION} />
           {/* Webページの概要や内容などを指定 */}
+          <meta name="theme-color" content="#5588cc" />
           <meta
             name="theme-color"
             media="(prefers-color-scheme: light)"
@@ -41,15 +45,24 @@ class Document extends NextDocument {
             ・nofollow：クローラーに巡回させない */}
           <meta name="format-detection" content="telephone=no" />
           {/* メールアドレス・電話番号・住所の自動リンクを無効化する */}
+          {/*  OGPの設定  */}
           {/* OGPタグ:SNSとWebページの情報を連携させる際に記述するタグ */}
-          <meta property="og:type" content="website" />
+          <meta property="og:type" content="blog" />{" "}
+          {/* 表示するページの種類 */}
           <meta property="og:title" content={SITE_NAME} />
+          {/* ページのタイトルを指定します。titleタグで設定したタイトルと同様のものを記述するのが一般的ですが、別のタイトルを記載すると、og:titleのタイトルが優先される。 */}
           <meta property="og:url" content={SITE_URL} />
+          {/* 表示するページのURLを指定します。URLは絶対パスで記述。 */}
           <meta property="og:description" content={SITE_DESCRIPTION} />
+          {/* og:descriptionの適した文字数は80～90文字程度 */}
           <meta property="og:site_name" content={SITE_NAME} />
           <meta property="og:image" content={`${SITE_URL}/ogp.png`} />
-          <meta name="twitter:card" content="summary_large_image" />
+          {/* Webの記事やページがSNSでシェアされた際に表示されるサムネイルとなる画像を指定 */}
+          {/* Twitterカードの設定 */}
+          <meta name="twitter:card" content="summary" />
+          {/* サマリーカードの場合は”summary“、大型画像付きサマリーカードの場合は”summary_large_image”と指定 */}
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          {/* ホームページをスマホのホーム画面に追加した時に表示される画像のこと */}
         </Head>
         <body
           id="#"
