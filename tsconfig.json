@@ -3,7 +3,7 @@
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"], //コンパイルする際に使用する組み込みライブラリを指定する。
     "allowJs": false, //trueにしておくと、.jsと.jsxもコンパイル対象に含まれるようになる。
-    "skipLibCheck": true, //*.d.ts ファイルに対する型チェックをスキップ
+    "skipLibCheck": false, //*.d.ts ファイルに対する型チェックをスキップ
     "strict": false,
     "forceConsistentCasingInFileNames": false,
     "noEmit": true, // Do not compile the JS (or TS) files in this project on build
