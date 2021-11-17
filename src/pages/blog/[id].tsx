@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from "react";
-import { GetStaticPaths, GetServerSideProps } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 import Layout from "components/General/Layout";
 import { blog as client } from "lib/HeadlessCMS/blog";
 import { Blog } from "types/Blog";
@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 // ↑から受け取る
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;
 
