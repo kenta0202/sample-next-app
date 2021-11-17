@@ -4,7 +4,7 @@
 import React from "react";
 import Layout from "components/General/Layout";
 import { blog as client } from "lib/HeadlessCMS/blog";
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 // GetStaticProps
 import { Blog as TBlog } from "types/Blog";
 import { BlogArea } from "components/Blog/BlogArea";
@@ -31,8 +31,8 @@ const index: React.VFC<Props> = ({ blogs }: Props) => {
 
 export default index;
 
-// export const getStaticProps: GetStaticProps = async () => {
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
+  // export const getServerSideProps: GetServerSideProps = async () => {
   const data = await client.get({
     endpoint: "blog",
     queries: { depth: 1 },
