@@ -31,6 +31,14 @@
     - none,backwards,forwards,both
   - animation-play-state アニメーションの再生・停止を指定する
     - running 再生中, paused 一時停止
+- white-space プロパティ
+  改行 まとめ 折り返し
+  normal ｜ しない まとめる 折り返す
+  pre ｜ する まとめない 折り返さない
+  nowrap ｜ しない まとめる 折り返さない
+  pre-wrap ｜ する まとめない 折り返す
+  pre-line ｜ する まとめる 折り返す
+  -
 
 ## Taiwind
 

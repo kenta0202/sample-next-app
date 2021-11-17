@@ -5,6 +5,7 @@ import { User } from "../../types";
 import { sampleUserData } from "../../data/sample-data";
 import Layout from "../../components/General/Layout";
 import ListDetail from "../../components/ListDetail";
+import { server } from "../../../config";
 
 type Props = {
   item?: User;
@@ -35,9 +36,32 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 
 export default StaticPropsDetail;
 
-export const getStaticPaths: GetStaticPaths = () => {
+// export const getStaticPaths: GetStaticPaths = () => {
+//   // Get the paths we want to pre-render based on users
+//   const paths = sampleUserData.map((user) => ({
+//     params: { id: user.id.toString() },
+//   }));
+
+//   // { fallback: false } means other routes should 404.
+//   return { paths, fallback: false };
+// };
+
+// export const getStaticProps: GetStaticProps = ({ params }) => {
+//   try {
+//     const id = params?.id;
+//     const item = sampleUserData.find((data) => data.id === Number(id));
+//     return { props: { item } };
+//   } catch (err) {
+//     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+//     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+//     return { props: { errors: err.message } };
+//   }
+export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = sampleUserData.map((user) => ({
+  const items: User[] = await fetch(`${server}/api/users`).then((res) =>
+    res.json()
+  );
+  const paths = items.map((user) => ({
     params: { id: user.id.toString() },
   }));
 
@@ -45,14 +69,10 @@ export const getStaticPaths: GetStaticPaths = () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
-  try {
-    const id = params?.id;
-    const item = sampleUserData.find((data) => data.id === Number(id));
-    return { props: { item } };
-  } catch (err) {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    return { props: { errors: err.message } };
-  }
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  const item: User = await fetch(`${server}/api/users/${params.id}`).then(
+    (res) => res.json()
+  );
+  return { props: { item } };
 };

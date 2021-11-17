@@ -16,11 +16,14 @@ export const BlogArea: React.VFC<Props> = ({ blogs }: Props) => {
   const router = useRouter();
   const query_category = router.query.category as string;
   const query_pageNumber = parseInt(router.query.page as string);
+  const ContentsPerPage = 8;
 
+  // カテゴリを取得
   const category = [
     ...new Set(blogs.map(({ category }) => category).flat()),
   ] as string[];
-  const ContentsPerPage = 8;
+
+  // クエリパラメータによって表示するコンテンツを変える(8個ずつ)
   const newblogs = query_pageNumber
     ? blogs.slice(
         (query_pageNumber - 1) * ContentsPerPage,

@@ -4,7 +4,8 @@
 import React from "react";
 import Layout from "components/General/Layout";
 import { blog as client } from "lib/HeadlessCMS/blog";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
+// GetStaticProps
 import { Blog as TBlog } from "types/Blog";
 import { BlogArea } from "components/Blog/BlogArea";
 
@@ -38,3 +39,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   });
   return { props: { blogs: data.contents } };
 };
+
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const data = await client.get({
+//     endpoint: "blog",
+//     queries: { depth: 1 },
+//   });
+//   return { props: { blogs: data.contents } };
+// };

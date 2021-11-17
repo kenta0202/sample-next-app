@@ -11,8 +11,6 @@ type Props = {
 };
 
 export const Content: React.VFC<Props> = ({ blog }: Props) => {
-  console.dir(blog);
-
   // 日付の設定
   dayjs.locale("ja");
   const BlogDate = dayjs(blog.publishedAt).format("YYYY-MM-DD (ddd)");

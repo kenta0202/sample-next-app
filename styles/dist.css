@@ -1309,6 +1309,9 @@ video {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
+.delay-1000 {
+	transition-delay: 1000ms;
+}
 .duration-300 {
 	transition-duration: 300ms;
 }

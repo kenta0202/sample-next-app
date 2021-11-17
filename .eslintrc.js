@@ -37,6 +37,7 @@ module.exports = {
     "blog.js",
     "postcss.config.js",
     "scroll.js",
+    "config/index.ts",
   ],
   plugins: ["jest"],
   settings: {

@@ -34,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 };
-
+// ↑から受け取る
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;

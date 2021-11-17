@@ -16,7 +16,6 @@ export const HeadInformation: React.VFC<Props> = ({ title }: Props) => {
   const router = useRouter();
   return (
     <Head>
-      {console.log(router)}
       <title>
         {title
           ? title
