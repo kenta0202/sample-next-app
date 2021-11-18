@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const auth: React.VFC = () => {
   console.log(process.env.NEXTAUTH_URL);
+  console.log(process.env.NEXT_PUBLIC_FOO);
   const [session, loading] = useSession();
   return (
     <>
