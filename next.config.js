@@ -5,7 +5,9 @@ module.exports = {
       "links.papareact.com",
       "source.unsplash.com",
       "images.microcms-assets.io",
+      "lh3.googleusercontent.com",
     ],
+    formats: ["image/avif", "image/webp"],
   },
   //   next.config.js に使用する外部ドメインを設定
   env: {

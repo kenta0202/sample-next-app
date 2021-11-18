@@ -56,3 +56,4 @@
 - transition-○○ ease-in-out duration-300
 - col-span-{n}ユーティリティを使用して、要素を n 列に広げます。
 - className={`${!selected && " ml-4"}`}
+- hidden xl:inline-flex

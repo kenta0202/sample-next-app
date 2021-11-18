@@ -12,7 +12,7 @@ export const Footer = () => {
           duration={600}
           offset={-50}
         >
-          <ChevronUpIcon className="w-12 sm:w-14 md:w-16 lg:w-20 text-gray-400 group-hover:opacity-70 group-hover:scale-110 cursor-pointer" />
+          <ChevronUpIcon className="w-12 sm:w-14 md:w-16 text-gray-400 group-hover:opacity-70 group-hover:scale-110 cursor-pointer" />
         </Scroll>
       </div>
 
