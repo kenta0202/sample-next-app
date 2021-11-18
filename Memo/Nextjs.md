@@ -78,6 +78,12 @@
 - firebase deploy
   https://gist.github.com/LeeDDHH/e0eb75f87f48cd5c5a613a692c66ac78
 
+## NextAuth
+
+- 承認済みの Js 生成元 http://localhost:3000
+- 承認済みのリダイレクト URL http://localhost:3000/api/auth/callback/google
+- NEXTAUTH_URL=http://localhost:3000
+
 # その他
 
 - Link 要素の as は動的リンクの時に使う
