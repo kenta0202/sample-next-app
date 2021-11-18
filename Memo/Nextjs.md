@@ -83,6 +83,20 @@
 - 承認済みの Js 生成元 http://localhost:3000
 - 承認済みのリダイレクト URL http://localhost:3000/api/auth/callback/google
 - NEXTAUTH_URL=http://localhost:3000
+- const router = useRouter();
+  const [session, loading] = useSession();
+
+if (loading) {
+return <div>Loading....</div>;
+}
+if (!session) {
+router.push("/");
+}
+
+## お問い合わせフォーム
+
+- https://zenn.dev/tiwu_dev/articles/a7ebe4d36e4b74?utm_source=pocket_mylist
+-
 
 # その他
 
