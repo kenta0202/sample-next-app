@@ -5,6 +5,7 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import Image from "next/image";
 
 const auth: React.VFC = () => {
+  console.log(process.env.NEXTAUTH_URL);
   const [session, loading] = useSession();
   return (
     <>
